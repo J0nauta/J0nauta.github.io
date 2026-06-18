@@ -1,102 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
-:root {
-    --cor-padrao: #0b0c47;
-    --cor-barra: #6b6360;
-    --fundo-secao: #cac8c8;
+:root{
+    --mainColor: crimson;
+    --bgSection: white;
+    --barColor: rgb(207, 127, 127);
 }
 
-* {
+*{
     padding: 0;
     border: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html, body{
     min-height: 100vh;
-    background-color: var(--cor-padrao);
+    background-color: var(--mainColor);
 }
 
-main {
+main{
     display: grid;
     grid-template-columns: 35% 1fr;
     gap: 16px;
     margin: 20px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Google Sans", sans-serif;
 }
 
-section {
-    background-color: var(--fundo-secao);
-    border-radius: 10px;
+@media(max-width: 880px){
+    main {
+        grid-template-columns: 1fr;
+    }
 }
 
-.esquerda, .experiencias, .educacao {
-    background-color: var(--fundo-secao);
-    border-radius: 10px;
+
+.left, .experience, .education{
+    background-color: var(--bgSection);
+    border-radius: 7px;
     overflow: hidden;
-
 }
 
-.experiencias, .educacao {
+.experience, .education{
     padding: 10px;
 }
 
-.esquerda {
+.left{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.direita {
-    gap: 20px;
-    display:flex;
-    flex-direction: column;
-}
-
-.data {
-    color: var(--cor-padrao);
-}
-
-ul {
-    list-style: none;
-}
-
-.imagem-esquerda {
+.leftImage{
     position: relative;
 }
 
-.imagem-esquerda img {
+.leftImage img{
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 7px;
 }
 
-.imagem-esquerda h1 {
+.leftImage h1{
     position: absolute;
     bottom: 0;
-    color: rgb(217, 217, 217);
+    color: #ff5709e8;
 }
 
-.pessoal, .habilidades, .linguagens {
+.right{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style: none;
+}
+
+.personal, .skills, .languages{
     padding: 16px;
     line-height: 20px;
 }
 
-.progresso {
+.progress{
     display: inline-block;
     width: 100%;
     height: 16px;
-    background-color: var(--cor-barra);
+    background-color: var(--barColor);
     transition: 100ms ease;
     border-radius: 20px;
 }
 
-.barra {
+.bar{
     border-radius: 20px;
     height: 100%;
-    background-color: var(--cor-padrao);
+    width: 80%;
+    background-color: var(--mainColor);
 }
 
-.nome-item {
+.itenName{
     font-weight: bolder;
-
 }
+
+.date, i{
+    color: var(--mainColor);
+}
+
+footer{
+    color: white;
+    background-color: black;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--mainColor);
+    padding: 5px;
+    transition: 100ms ease;
+}
+
+footer a:hover, i:hover{
+    color: rgb(255, 0, 0);
+    
+}
+
